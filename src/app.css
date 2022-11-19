@@ -1,0 +1,11 @@
+@font-face {
+	font-family: "VALORANT";
+	font-style: normal;
+	font-weight: 400;
+	src: local('VALORANT'),url('https://fonts.cdnfonts.com/s/37505/Valorant Font.woff') format('woff')
+}
+
+body {
+	background-image: url("background.png");
+  background-size: cover;
+}
