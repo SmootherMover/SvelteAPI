@@ -1,6 +1,6 @@
 <script>
 	import Navbar from "./lib/Navbar.svelte"
-  import Random from "./lib/Random.svelte"
+  import Info from "./lib/Info.svelte"
 
   let agentID;
   let show;  
@@ -35,20 +35,23 @@
     if(agentID == 7){
       agentID = 8;
     };
-    input = capitalizeFirstLetter(getObjKey(agentList, agentID));
+    input = getObjKey(agentList, agentID);
   };
 
+  console.log(agentList["fade"])
   const getObjKey = (obj, val) => Object.keys(obj).find(key => obj[key] === val);
     
-  const capitalizeFirstLetter = string => string.charAt(0).toUpperCase() + string.slice(1);
-  
   const searchAgent = () => {
     if(agentList[input.toLowerCase()]){
       agentID = agentList[input.toLowerCase()];
       show = true;
+      console.log(agentID);
+    }else if(agentList[input.toLowerCase()] == 0){
+      agentID = 0;
+      show = true;    
     }else{
       show = false;
-    }   
+    };
   };
 
 </script>
@@ -58,9 +61,9 @@
 <button on:click = {randomID}>
   Random Agent
 </button>
-<input bind:value={input} on:input={searchAgent}>
+<input maxlength = "10" bind:value={input} on:input={searchAgent}>
 </div>
-<Random {agentID} {show} {input} />
+<Info {agentID} {show} {input} />
 
 
 <style>
@@ -81,8 +84,8 @@
     color:white;
   }
 
-
   input{
+    font-family: "VALORANT", sans-serif;
     border-radius: 10px;
     padding: 10px;
   }

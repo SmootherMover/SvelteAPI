@@ -13,7 +13,7 @@
     }
   };
   let userPromise = getAgent();
-  console.log(Object.entries(userPromise));
+  console.log(userPromise);
 </script>
 
 <h2>{input}</h2>
@@ -22,9 +22,9 @@
   <p>Waiting</p>
 {:then agents}
   <li style="list-style-type: none;">
-    <img src= {agents.data[agentID].fullPortrait} alt = "asd"/>
-    <p><b style="color: black;">Description:</b> {agents.data[agentID].description}</p>
-    <h3 style="text-align: center; color: black;"><b><u>Abilities</u></b></h3>
+    <img src= {agents.data[agentID].fullPortrait} alt = "Agent Portrait"/>
+    <p><b>Description:</b> {agents.data[agentID].description}</p>
+    <h3><b><u>Abilities</u></b></h3>
     <p class="abilities"><b>{agents.data[agentID].abilities[0].displayName}:</b> {agents.data[agentID].abilities[0].description}</p>
     <p class="abilities"><b>{agents.data[agentID].abilities[1].displayName}:</b> {agents.data[agentID].abilities[1].description}</p>
     <p class="abilities"><b>{agents.data[agentID].abilities[2].displayName}:</b> {agents.data[agentID].abilities[2].description}</p>
@@ -48,21 +48,21 @@ img{
   background-color: white;
   width: 20vw;
   border: solid 5px black;
-  
 }
-
 
 p{ 
   background-color: #FF4457;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-
 h3{
-  color: white;
+  color: black;
   -webkit-text-stroke: 0.2px black;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "VALORANT", sans-serif;
   text-align: center; 
-  
+  font-size: 25px;
+
 }
 </style>
