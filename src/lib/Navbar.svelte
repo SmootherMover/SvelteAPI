@@ -1,5 +1,4 @@
 
-
 <div>
     <img src="https://images.cults3d.com/4QqRV9kLYYEuw9ur_X3yjQl1sjk=/516x516/https://files.cults3d.com/uploaders/15024335/illustration-file/a86d53e4-2bd9-4a8f-9550-986686c3131a/gi0mAjIh_400x400.png#1" alt = "Valorant Logo"> 
     <p1>Valorant Agents</p1>
